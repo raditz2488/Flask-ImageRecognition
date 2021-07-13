@@ -24,7 +24,7 @@ def allowed_file(filename):
 app = Flask(__name__)
 model = MobileNet(weights='imagenet', include_top=True)
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def index():
     return render_template('ImageML.html')
 
