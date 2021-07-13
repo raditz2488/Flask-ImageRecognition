@@ -1,1 +1,1 @@
-web: gunicorn ImageRecognition:app
+web: gunicorn --bind 0.0.0.0:$PORT ImageRecognition:app
