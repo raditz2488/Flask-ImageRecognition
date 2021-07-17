@@ -26,7 +26,7 @@ model = MobileNet(weights='imagenet', include_top=True)
 
 @app.route('/', methods=['GET'])
 def index():
-    return 'Hello world'#render_template('ImageML.html')
+    return render_template('ImageML.html')
 
 @app.route('/api/image', methods=['POST'])
 def upload_image():
